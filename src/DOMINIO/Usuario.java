@@ -23,7 +23,7 @@ public class Usuario {
         this.contraseña=contraseña;
     }
     
-    public String getNinck(){
+    public String getNick(){
         return nick;
     }
     
@@ -38,4 +38,5 @@ public class Usuario {
     public void setContraseña(String contraseña){
         
     }
+  
 }

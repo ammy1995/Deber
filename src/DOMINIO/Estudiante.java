@@ -23,9 +23,7 @@ public class Estudiante {
        correo= " ";
        nivelestudio= " ";
     }
-    
-    
-    
+     
     public Estudiante (String nombre, String apellido,String correo,String nivelestudio){
         this.nombre = nombre;
         this.apellido=apellido;
@@ -64,4 +62,6 @@ public class Estudiante {
     public void setNivelEstudio(String nivelestudio){
         
     }
+    
+       
 }
