@@ -30,17 +30,22 @@ public class Estudiante {
      * nivel de estudio del estudiante
      */
     private String nivelestudio;
+     private Estudiante[]estudiantes;
+    private int tam;
+    private int cam;
+   
     
     /**
      * Metodo Constructor sin estudiante
      */
-    
     public Estudiante (){
        nombre=" ";
        apellido= " ";
        correo= " ";
        nivelestudio= " ";
     }
+    
+    
     
     /**
      * Metodo Constructor con parametros
@@ -114,4 +119,17 @@ public class Estudiante {
     public void setNivelEstudio(String nivelestudio){
         this.nivelestudio=nivelestudio;
     }
+   /**
+    * 
+    * @return 
+    */
+   @Override
+   public String toString(){
+       
+        
+       return "Nombre: "+this.nombre+'\n'+"Apellido: "+this.apellido+'\n'+"Correo: "+this.correo+'\n'+"Grado: "+this.nivelestudio;
+    
+    }
+    
+    
 }

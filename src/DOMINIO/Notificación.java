@@ -95,7 +95,7 @@ public class Notificación {
      * Metodo set id
      * @param id 
      */
-    public void setIdNotificacion(String id){
+    public void setIdNotificacion(int id){
       this.idnotificacion = id;
     }
     
@@ -103,7 +103,7 @@ public class Notificación {
      * Metodo set Fecha
      * @param fecha 
      */
-    public void setFecha(String fecha){
+    public void setFecha(Date fecha){
         this.fecha=fecha;
     }
     
@@ -111,8 +111,8 @@ public class Notificación {
      * Metodo set Hora
      * @param hora 
      */
-    public void setHora(String hora){
-        this.fecha=hora;
+    public void setHora(LocalDateTime hora){
+        this.hora=hora;
     }
     
     /**
@@ -122,4 +122,13 @@ public class Notificación {
     public void setDescripcion(String descripcion){
        this.descripcion=descripcion; 
     }
+     public String toString(){
+        String s="";
+        s+="Id Notificación:"+ idnotificacion +"\n";
+        s+="Fecha:"+ fecha +"\n";
+        s+="Hora:"+ hora+"\n";
+        s+="Descripción:"+ descripcion+"\n";
+        return s;
+    }
+    
 }

@@ -1,9 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package DOMINIO;
+
+
+import java.util.Scanner;
 
 /**
  * datos de la categoria
@@ -13,42 +11,43 @@ public class Categoria {
     /**
      * Atributos
      */
-    
+
     /**
      * nombre de la categoria
      */
-   private String nombre;
-   /**
-    * reunion una categoria
-    */
+    private String nombre;
+    /**
+     * reunion una categoria
+     */
     private String reuniones;
     /**
      * citas una categoria
      */
     private String citas;
     /**
-     * Tarea una categoria 
+     * Tarea una categoria
      */
     private String tarea;
-    
+
     /**
      * Metodo Constructor sin parametros
+     * @param nombre
      */
-    public Categoria (){
-       nombre=" ";
-       reuniones= " ";
-       citas= " ";
-       tarea= " ";
+    public Categoria(String nombre){
+        this.nombre =" ";
+        reuniones= " ";
+        citas= " ";
+        tarea= " ";
     }
-    
+
     /**
      * Metodo Constructor con parametros
      * @param nombre
      * @param reuniones
      * @param citas
-     * @param tarea 
+     * @param tarea
      */
-    
+
     public Categoria (String nombre, String reuniones,String citas,String tarea){
         this.nombre = nombre;
         this.reuniones=reuniones;
@@ -76,7 +75,7 @@ public class Categoria {
     public String getCitas(){
         return citas;
     }
-    
+
     /**
      * Metodo get tarea
      * @return tarea
@@ -84,35 +83,44 @@ public class Categoria {
     public String getTarea(){
         return tarea;
     }
-    
+
     /**
      * Metodo set nombre
-     * @param nombre 
+     * @param nombre
      */
     public void setNombre(String nombre){
-       this.nombre=nombre;
+
     }
-    
+
     /**
      * Metodo set reuniones
-     * @param reuniones 
+     * @param reuniones
      */
     public void setReuniones(String reuniones){
-        this.reuniones=reuniones;
+
     }
     /**
      * Metodo set citas
-     * @param citas 
+     * @param citas
      */
     public void setCitas(String citas){
-        this.citas=citas;
+
     }
-    
+
     /**
      * Metodo set tarea
-     * @param tarea 
+     * @param tarea
      */
     public void setTarea(String tarea){
-        this.tarea=tarea;
+
     }
+    public String toString(){
+        String s="";
+        s+="Nombre:"+nombre +"\n";
+        s+="Reuniones:"+reuniones +"\n";
+        s+="Citas:"+citas+"\n";
+        s+="Tarea:"+tarea+"\n";
+        return s;
+    }
+
 }

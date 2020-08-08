@@ -23,6 +23,8 @@ public class TestActividad {
         
         System.out.println(actprueba.getActividadExtra(0));
         System.out.println(actprueba.imprimirActividad());
+       
+        
         //actprueba.setFecha(fecha);
         //actprueba.setHora(LocalDateTime.MIN);
         actprueba.setImportancia("Muy importante");
