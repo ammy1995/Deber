@@ -4,9 +4,9 @@
  * and open the template in the editor.
  */
 package DOMINIO;
-import java.time.LocalDate;
+/*import java.time.LocalDate;
 import java.util.Date;
-import java.time.LocalDateTime;
+import java.time.LocalDateTime;*/
 /**
  * Datos de la notificacion 
  * @author ammy
@@ -23,11 +23,11 @@ public class Notificación {
     /**
      * fecha de la notificacion
      */
-    private Date fecha;
+    private String fecha;
     /**
      * hora de la notificacion
      */
-    private LocalDateTime hora;
+    private String hora;
     /**
      * descripcion de la notificacion
      */
@@ -38,8 +38,8 @@ public class Notificación {
      */
     public Notificación (){
      idnotificacion= 0;
-     LocalDate fecha1 = LocalDate.of(2018,10,30);
-      LocalDateTime hora1 = LocalDateTime.now();
+     //LocalDate fecha1 = LocalDate.of(2018,10,30);
+      //LocalDateTime hora1 = LocalDateTime.now();
      descripcion= " ";
        
     }
@@ -52,7 +52,7 @@ public class Notificación {
      * @param descripcion 
      */
     
-    public Notificación (int id, Date fecha,LocalDateTime hora,String descripcion){
+    public Notificación (int id, String fecha,String hora,String descripcion){
         this.idnotificacion = id;
         this.fecha=fecha;
         this.hora= hora;
@@ -71,7 +71,7 @@ public class Notificación {
      * Metodo get fecha
      * @return fecha
      */
-    public Date getFecha(){
+    public String getFecha(){
         return fecha;
     }
     
@@ -79,7 +79,7 @@ public class Notificación {
      * Metodo get Hora
      * @return hora
      */
-    public LocalDateTime getHora(){
+    public String getHora(){
         return hora;
     }
     
@@ -103,7 +103,7 @@ public class Notificación {
      * Metodo set Fecha
      * @param fecha 
      */
-    public void setFecha(Date fecha){
+    public void setFecha(String fecha){
         this.fecha=fecha;
     }
     
@@ -111,7 +111,7 @@ public class Notificación {
      * Metodo set Hora
      * @param hora 
      */
-    public void setHora(LocalDateTime hora){
+    public void setHora(String hora){
         this.hora=hora;
     }
     

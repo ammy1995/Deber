@@ -12,11 +12,10 @@ import java.util.Scanner;
  * @author ammy
  */
 public class TestCategoria {
-       public static void main(String[] args) {
+       public void subCategoria() {
        Categorias C =new Categorias(10);
-       int x;
-       do{
-           x=menu1();
+       Scanner op = new Scanner (System.in);
+       int x=op.nextInt();
            switch(x){
 
                case 1:
@@ -44,15 +43,10 @@ public class TestCategoria {
                    System.out.println("Por favor Ingrese una opción válida");
                    break;
            }
-       } while (x!=6);
 
     }
-
-
-
-    public static int menu1(){
-        int x;
-        Scanner ent= new Scanner(System.in);
+       
+    public void pantallaAdmCategorias(){
         System.out.println("--------------------------------------------");
         System.out.println("Menú Administrar Categorías: ");
         System.out.println("1. Crear Categoría");
@@ -61,8 +55,6 @@ public class TestCategoria {
         System.out.println("3. Editar Categoría");
         System.out.println("3. Eliminar Categoría");
         System.out.println("--------------------------------------------");
-        x= ent.nextInt();
-        return x;
     }
     private static void agregar (Categorias C){
         Scanner ent = new Scanner (System.in);

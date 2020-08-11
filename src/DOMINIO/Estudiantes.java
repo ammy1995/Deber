@@ -36,22 +36,21 @@ public class Estudiantes {
       return null;  
     }
     
-    public boolean eliminar(String nombre){
-        for(int i=0;i<cam;i++){
-            if(estudiantes[i].getNombre().equals(nombre)){
-                correrIzquierdad(i);
-                return true;
+    public boolean eliminar (String nombre){
+            for (int i=0;i<cam;i++){
+                if(estudiantes[i].getNombre().equals(nombre)){
+                    correrIzquierda (i);
+                    return true;
+                }
             }
-        } 
-        return false;
+            return false;
     }
     
-     private void correrIzquierdad(int x) {
-        for(int i=x;i<cam;i++){
+    private void correrIzquierda(int x) {
+        for (int i=0;i<cam;i++){
             estudiantes[i]=estudiantes[i+1];
-            
-        } 
-       cam--;
+        }
+        cam--;
     }
     
     @Override

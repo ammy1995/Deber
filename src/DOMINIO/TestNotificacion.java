@@ -12,11 +12,11 @@ import java.util.Scanner;
  * @author ammy
  */
 public class TestNotificacion {
-    public static void main(String[] args) {
+    public void subnotificacion() {
         Notificaciones C1 =new Notificaciones(10);
-        int y;
-        do{
-            y=menu2();
+        Scanner op= new Scanner(System.in);
+        int y=op.nextInt();
+        
             switch(y){
 
                 case 1:
@@ -43,14 +43,12 @@ public class TestNotificacion {
                     System.out.println("Por favor Ingrese una opción válida");
                     break;
             }
-        } while (y!=6);
+       
 
     }
 
 
-    public static int menu2(){
-        int y;
-        Scanner ent= new Scanner(System.in);
+    public void pantallaAdmNotificaciones(){
         System.out.println("--------------------------------------------");
         System.out.println("Menú Administrar Notificación: ");
         System.out.println("1. Crear Notificación");
@@ -59,8 +57,6 @@ public class TestNotificacion {
         System.out.println("4. Editar Notificación");
         System.out.println("5. Eliminar Notificación");
         System.out.println("--------------------------------------------");
-        y= ent.nextInt();
-        return y;
     }
     private static void agregar (Notificaciones C1){
         Scanner ent = new Scanner (System.in);
@@ -68,13 +64,14 @@ public class TestNotificacion {
         String hora;
         String descripcion;
         String fecha;
-        System.out.println("Id Notificación: ");
+        System.out.print("Id Notificación: ");
         idnotificacion=ent.nextInt();
-        System.out.println("Fecha: ");
+        System.out.print("Fecha: ");
         fecha = ent.nextLine();
-        System.out.println("Hora: ");
+        ent.nextLine();
+        System.out.print("Hora: ");
         hora=ent.nextLine();
-        System.out.println("Descripción: ");
+        System.out.print("Descripción: ");
         descripcion=ent.nextLine();
         C1.agregar(new Notificación(idnotificacion,fecha,hora,descripcion));
 
@@ -86,7 +83,7 @@ public class TestNotificacion {
     private static void buscar(Notificaciones C1) {
         Scanner ent=new Scanner(System.in);
         int idnotificacion;
-        System.out.println("Id Notificación: ");
+        System.out.print("Id Notificación: ");
         idnotificacion=ent.nextInt();
         Notificación aux = C1.buscar(idnotificacion);
         if(aux !=null){
@@ -94,11 +91,12 @@ public class TestNotificacion {
         }else
             System.out.println("No existe Notificación");
     }
+   
     private static void editar (Notificaciones C1){
         Scanner ent = new Scanner(System.in);
         int idnotificacion;
         int nuevo;
-        System.out.println("Id Notificación: ");
+        System.out.print("Id Notificación: ");
         idnotificacion=ent.nextInt();
         Notificación aux= C1.buscar(idnotificacion);
         if(aux != null){
@@ -112,7 +110,7 @@ public class TestNotificacion {
     private static void eliminar (Notificaciones C1){
         Scanner ent=new Scanner (System.in);
         String descripcion;
-        System.out.println("Descripción");
+        System.out.print("Descripción");
         descripcion=ent.nextLine();
         if(C1.eliminar(descripcion)){
             System.out.println("Eliminación correcta");
