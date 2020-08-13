@@ -60,6 +60,10 @@ public class ActExtra {
         this.importancia=importancia;
         this.notificacion=notificacion;
     }
+
+    ActExtra(String fecha, String hora, String importancia, String notificacion) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     /**
      * Metodo get de la Fecha
      * @return fecha

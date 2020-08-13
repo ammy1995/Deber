@@ -5,6 +5,7 @@
  */
 package DOMINIO;
 
+import GUI.Menu;
 import java.util.Scanner;
 
 
@@ -18,6 +19,7 @@ public class TestEstudiante {
     public void subEstudiante() {
        
         Estudiantes sp= new Estudiantes(2);
+        Menu menu= new Menu();
         Scanner op = new Scanner(System.in);
         int l=op.nextInt();
  
@@ -40,7 +42,7 @@ public class TestEstudiante {
                     Scanner usuarioSis = new Scanner(System.in);
                     String nick = nombre + apellido;
                     System.out.println("Su nick es: "+ nick);
-                    System.out.print("Ingrse Contraseña: ");
+                    System.out.print("Ingrese Contraseña: ");
                     String contraseña = usuarioSis.nextLine();
                     Usuario us = new Usuario(nick,contraseña);
                     break;
@@ -66,6 +68,8 @@ public class TestEstudiante {
                     break;     
                
             }
+            
+            menu.MenuPrincipal();
         
     }
     public  void pantallaAdmEstudiante(){

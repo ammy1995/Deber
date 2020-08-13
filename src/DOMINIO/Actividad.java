@@ -22,11 +22,11 @@ public class Actividad {
     /**
      * Fecha de la actividad
      */
-    private Date fecha;
+    private String fecha;
     /**
      * Hora de la actividad
      */
-    private LocalDateTime hora;
+    private String hora;
     /**
      * importancia de la actividad
      */
@@ -49,6 +49,8 @@ public class Actividad {
      LocalDateTime hora1 = LocalDateTime.now();
      importancia = " ";
      notificacion= " ";
+     fecha = " ";
+     hora = " ";
     }
     
     /**
@@ -59,7 +61,7 @@ public class Actividad {
      * @param notificacion 
      */
     
-    public Actividad (Date fecha, LocalDateTime hora, String importancia ,String notificacion){
+    public Actividad (String fecha, String hora, String importancia ,String notificacion){
         this.fecha= fecha;
         this.hora = hora;
         this.importancia=importancia;
@@ -72,7 +74,7 @@ public class Actividad {
      * @return fecha
      */
     
-    public Date getFecha(){
+    public String getFecha(){
         return fecha;
     }
     
@@ -80,7 +82,7 @@ public class Actividad {
      * Metodo get de la Hora
      * @return Hora
      */
-    public LocalDateTime getHora(){
+    public String getHora(){
         return hora;
     }
     
@@ -103,14 +105,14 @@ public class Actividad {
      * Metodo set fecha
      * @param fecha 
      */
-    public void setFecha(Date fecha){
+    public void setFecha(String fecha){
      this.fecha=fecha;
     }
     /**
      * Metodo set hora
      * @param hora 
      */
-    public void setHora(LocalDateTime hora){
+    public void setHora(String hora){
        this.hora=hora; 
     }
     /**

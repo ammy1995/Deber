@@ -34,10 +34,10 @@ public class Menu {
             System.out.println("Ingreso al Sistema");
             break;  
             case 3:
-            submenu.pantallaAdmActividades();            
+            submenu.subMenuAdmActividades();            
             break; 
             case 4:
-            submenu.pantallaAdmCategorias();            
+            submenu.subMenuAdmCategoria();            
             break; 
             case 5:
             submenu.pantallaAdmNotificaciones();            
